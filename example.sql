@@ -33,9 +33,6 @@ VALUES
   ('Gyoza', 'Like a tiny pasty', 450, 2),
   ('Vol-au-vents', 'ooh lala!', 320, 2);
 
-SELECT snack_name AS title, snack_description, price_in_pence, category_name FROM snacks
-JOIN categories ON snacks.category_id = categories.category_id;
-
 CREATE TABLE vending_machines (
     vm_id SERIAL PRIMARY KEY,
     vm_location VARCHAR(100),
