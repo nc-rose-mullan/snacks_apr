@@ -55,11 +55,11 @@ CREATE TABLE maintenance_records (
 
 INSERT INTO maintenance_records (vm_id, last_serviced, description)
 VALUES
-    (3, '2025-01-15', 'Upgraded to pump out enticing, generic snack smell'),
+    (3, '2025-01-15', 'Upgrade to pump out enticing, generic snack smell'),
     (2, '2025-01-20', 'Replaced snack tray with a trampoline for extra bouncy snacks'),
     (4, '2025-02-01', 'Programmed the vending machine to speak in an annoying baby voice'),
     (2, '2025-02-10', 'Replaced the cooling system with a picture of Rose'),
     (1, '2025-02-18', 'Taught the payment system how to beatbox'),
     (1, '2025-02-25', 'Installed disco lights for the ultimate snack party vibe'),
     (3, '2025-02-28', 'Refilled machine with invisible snacks for a ghostly experience'),
-    (1, '2025-03-02', 'Upgraded the vending machine to provide pre-chewed snacks');
+    (1, '2025-03-02', 'Upgraded the vending machine to provide pre-chewed snack');
