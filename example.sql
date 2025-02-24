@@ -23,14 +23,14 @@ CREATE TABLE snacks(
 );
 
 INSERT INTO snacks
-  (snack_name, snack_description, price_in_pence, category_id)
+  (snack_name, snack_description, price_in_pence)
 VALUES
-  ('Party Rings', 'No party is complete without them!', 120, 3),
-  ('Hula Hoops', 'The party ring of the crisp world', 80, 1),
+  ('Party Rings', 'No party is complete without them!', 120),
+  ('Hula Hoops', 'The party ring of the crisp world', 80),
   ('Pasty', null, 300, 2),
-  ('Nice Biscuits', 'More like ''alright'' biscuits', 150, 3),
-  ('Gyoza', 'Like a tiny pasty', 450, 2),
-  ('Vol-au-vents', 'ooh lala!', 320, 2);
+  ('Nice Biscuits', 'More like ''alright'' biscuits', 150),
+  ('Gyoza', 'Like a tiny pasty', 450),
+  ('Vol-au-vents', 'ooh lala!', 320);
 
 CREATE TABLE vending_machines (
     vm_id SERIAL PRIMARY KEY,
@@ -40,7 +40,7 @@ CREATE TABLE vending_machines (
 
 INSERT INTO vending_machines(vm_location, vm_rating)
 VALUES 
-('Cobham Services floor 1', 10),
+('Cobham Services', 10),
 ('The Olympiad, Chippenham', 2),
 ('Manchester Arndale', 4),
 ('Eureka, Halifax', 5);
