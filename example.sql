@@ -19,8 +19,7 @@ CREATE TABLE snacks(
   snack_id SERIAL PRIMARY KEY,
   snack_name VARCHAR(40) NOT NULL,
   snack_description VARCHAR(100),
-  price_in_pence INT,
-  category_id INT
+  price_in_pence INT
 );
 
 INSERT INTO snacks
@@ -46,19 +45,3 @@ VALUES
 ('Manchester Arndale', 4),
 ('Eureka, Halifax', 5);
 
-CREATE TABLE maintenance_records (
-    record_id SERIAL PRIMARY KEY,
-    last_serviced DATE,
-    description VARCHAR
-);
-
-INSERT INTO maintenance_records (last_serviced, description)
-VALUES
-    ('2025-01-15', 'Upgrade to pump out enticing, generic snack smell'),
-    ('2025-01-20', 'Replaced snack tray with a trampoline for extra bouncy snacks'),
-    ('2025-02-01', 'Programmed the vending machine to speak in an annoying baby voice'),
-    ('2025-02-10', 'Replaced the cooling system with a picture of Rose'),
-    ('2025-02-18', 'Taught the payment system how to beatbox'),
-    ('2025-02-25', 'Installed disco lights for the ultimate snack party vibe'),
-    ('2025-02-28', 'Refilled machine with invisible snacks for a ghostly experience'),
-    ('2025-03-02', 'Upgraded the vending machine to provide pre-chewed snack');
