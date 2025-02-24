@@ -33,9 +33,9 @@ VALUES
   ('Vol-au-vents', 'ooh lala!', 320);
 
 CREATE TABLE vending_machines (
-    vm_id SERIAL PRIMARY KEY
+    vm_id SERIAL PRIMARY KEY,
     vm_location VARCHAR(100),
-    vm_rating INT,
+    vm_rating INT
 );
 
 INSERT INTO vending_machines(vm_location, vm_rating)
