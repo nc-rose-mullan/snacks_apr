@@ -27,15 +27,15 @@ INSERT INTO snacks
 VALUES
   ('Party Rings', 'No party is complete without them!', 120),
   ('Hula Hoops', 'The party ring of the crisp world', 80),
-  ('Pasty', null, 300, 2),
+  ('Pasty', null, 300),
   ('Nice Biscuits', 'More like ''alright'' biscuits', 150),
   ('Gyoza', 'Like a tiny pasty', 450),
   ('Vol-au-vents', 'ooh lala!', 320);
 
 CREATE TABLE vending_machines (
-    vm_id SERIAL PRIMARY KEY,
+    vm_id SERIAL PRIMARY KEY
     vm_location VARCHAR(100),
-    vm_rating INT
+    vm_rating INT,
 );
 
 INSERT INTO vending_machines(vm_location, vm_rating)
