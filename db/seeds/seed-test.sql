@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS nc_snacks;
-CREATE DATABASE nc_snacks;
+DROP DATABASE IF EXISTS nc_snacks_test;
+CREATE DATABASE nc_snacks_test;
 
 \c nc_snacks
 
