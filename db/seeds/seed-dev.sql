@@ -49,8 +49,6 @@ VALUES
   ('Cashews', 'Gesundheit', 180, 5),
   ('Freddo', 'How much?!', 200, 6);
 
-  select snack_name, category_name from snacks FULL JOIN categories ON snacks.category_id = categories.category_id;
-
 CREATE TABLE vending_machines (
     vm_id SERIAL PRIMARY KEY,
     vm_location VARCHAR(100),
@@ -88,3 +86,7 @@ VALUES
 (3, 2),
 (4, 1), 
 (4, 5);
+
+SELECT * FROM snacks;
+SELECT * FROM categories;
+SELECT * FROM vending_machines;

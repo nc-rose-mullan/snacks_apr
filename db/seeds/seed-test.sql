@@ -66,3 +66,6 @@ VALUES
 (4, 1), 
 (4, 5);
 
+SELECT * FROM snacks;
+SELECT * FROM categories;
+SELECT * FROM vending_machines;
