@@ -13,12 +13,4 @@ if (!process.env.PGDATABASE) {
 }
 
 
-getSnackById(3)
-
-
-
-console.log("the ENV is:", ENV)
-
-console.log("connected to:", process.env.PGDATABASE)
-
 module.exports = pool
