@@ -1,0 +1,70 @@
+[
+    { 
+        "location": "The Olympiad, Chippenham", 
+        "rating": 7
+    },
+    { 
+        "location": "Manchester Arndale", 
+        "rating": 4
+    },
+    { 
+        "location": "Eureka, Halifax", 
+        "rating": 9
+    },
+    { 
+        "location": "National Maritime Museum", 
+        "rating": 2
+    },
+    { 
+        "location": "Denham Aerodrome", 
+        "rating": 6
+    },
+    { 
+        "location": "Elland Road (north stand)", 
+        "rating": 9
+    },
+    { 
+        "location": "Angel of the North (big Toe, left Foot)", 
+        "rating": 10
+    },
+    { 
+        "location": "Cobham Services", 
+        "rating": 10
+    },
+    { 
+        "location": "The Olympiad, Chippenham", 
+        "rating": 2
+    },
+    { 
+        "location": "Manchester Arndale", 
+        "rating": 4
+    },
+    { 
+        "location": "Eureka, Halifax", 
+        "rating": 5
+    },
+    { 
+        "location": "The Barbican, London", 
+        "rating": 8
+    },
+    { 
+        "location": "Bus Stop, Basingstoke", 
+        "rating": 3
+    },
+    { 
+        "location": "Avebury, Wiltshire", 
+        "rating": 7
+    },
+    { 
+        "location": "Local Library, Reading", 
+        "rating": 4
+    },
+    { 
+        "location": "Giant’s Causeway, Northern Ireland", 
+        "rating": 9
+    },
+    { 
+        "location": "Post Office, Scarborough", 
+        "rating": 6
+    }
+]
