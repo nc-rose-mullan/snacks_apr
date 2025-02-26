@@ -13,7 +13,12 @@ VALUES
 ('crisps'),
 ('pastry'),
 ('biscuits'),
-('cake');
+('cake'), 
+('nuts'),
+('sweets'),
+('fruit'),
+('veg'),
+('party food');
 
 CREATE TABLE snacks(
   snack_id SERIAL PRIMARY KEY,
@@ -27,22 +32,22 @@ CREATE TABLE snacks(
 INSERT INTO snacks
   (snack_name, snack_description, price_in_pence, category_id)
 VALUES
-  ('Party Rings', 'No party is complete without them!', 120, 1),
+  ('Party Rings', 'No party is complete without them!', 120, 3),
   ('Hula Hoops', 'The party ring of the crisp world', 80, 1),
   ('Pasty', null, 300, 2),
-  ('Nice Biscuits', 'More like ''alright'' biscuits', 150, null),
-  ('Gyoza', 'Like a tiny pasty', 450, 3),
-  ('Vol-au-vents', 'ooh lala!', 320, 2);
-
-
--- category_name: no. of snacks
-
-SELECT * FROM snacks RIGHT JOIN categories ON snacks.snacks.category_id = categories.category_id;
-
--- SELECT categories.category_name, COUNT(snacks.snack_id) AS snack_count FROM snacks RIGHT JOIN categories ON snacks.category_id = categories.category_id GROUP BY categories.category_name;
-
-
-
+  ('Nice Biscuits', 'More like ''alright'' biscuits', 150, 3),
+  ('Gyoza', 'Like a tiny pasty', 450, null),
+  ('Vol-au-vents', 'ooh lala!', 320, 9),
+  ('Salted Peanuts', 'The snack that gets your hands salty and your heart happy', 90, 5),
+  ('Chocolate Bar', 'Guaranteed to solve almost any problem, temporarily', 130, 6),
+  ('Apple Slices', 'When you try to be healthy but need sweetness', 100, 7),
+  ('Carrot Sticks', 'Because sometimes you need to dip something that crunches', 110, 8),
+  ('Fruit Salad', 'Fingers crossed for grapes', 200, 7),
+  ('Rice Cakes', 'Devoid of all joy', 150, null),
+  ('Pretzels', 'Knot bad!', 120, 1),
+  ('Gummy Worms', 'The early Gummy Bird catches the Gummy Worm', 100, 6),
+  ('Cashews', 'Gesundheit', 180, 5),
+  ('Freddo', 'How much?!', 200, 6);
 
 CREATE TABLE vending_machines (
     vm_id SERIAL PRIMARY KEY,
@@ -55,7 +60,13 @@ VALUES
 ('Cobham Services', 10),
 ('The Olympiad, Chippenham', 2),
 ('Manchester Arndale', 4),
-('Eureka, Halifax', 5);
+('Eureka, Halifax', 5),
+('The Barbican, London', 8),
+('Bus Stop, Basingstoke', 3),
+('Avebury, Wiltshire', 7),
+('Local Library, Reading', 4),
+('Giant’s Causeway, Northern Ireland', 9),
+('Post Office, Scarborough', 6);
 
 CREATE TABLE vending_machines_snacks(
   vm_id INT REFERENCES vending_machines(vm_id),
@@ -76,5 +87,6 @@ VALUES
 (4, 1), 
 (4, 5);
 
-
--- SELECT * FROM vending_machines_snacks JOIN vending_machines ON vending_machines.vm_id = vending_machines_snacks.vm_id JOIN snacks ON snacks.snack_id = vending_machines_snacks.snack_id;
+SELECT * FROM snacks;
+SELECT * FROM categories;
+SELECT * FROM vending_machines;
