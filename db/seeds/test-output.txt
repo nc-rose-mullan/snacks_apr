@@ -1,6 +1,6 @@
 DROP DATABASE
 CREATE DATABASE
-You are now connected to database "nc_snacks" as user "rosemullan".
+You are now connected to database "nc_snacks_test" as user "rosemullan".
 CREATE TABLE
 INSERT 0 4
 CREATE TABLE
