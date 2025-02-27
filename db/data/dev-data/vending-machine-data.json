@@ -4,14 +4,6 @@
         "rating": 7
     },
     { 
-        "location": "Manchester Arndale", 
-        "rating": 4
-    },
-    { 
-        "location": "Eureka, Halifax", 
-        "rating": 9
-    },
-    { 
         "location": "National Maritime Museum", 
         "rating": 2
     },
@@ -30,10 +22,6 @@
     { 
         "location": "Cobham Services", 
         "rating": 10
-    },
-    { 
-        "location": "The Olympiad, Chippenham", 
-        "rating": 2
     },
     { 
         "location": "Manchester Arndale", 
