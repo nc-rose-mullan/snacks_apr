@@ -1,0 +1,170 @@
+[
+    {
+        "snack_name": "Kit Kat", 
+        "snack_description": "Time for a break",
+        "price_in_pence": 100,
+        "category": "Chocolate"
+    },
+    {
+        "snack_name": "Party Rings",
+        "snack_description": "Can't have a party without them",
+        "price_in_pence": 80,
+        "category": "Biscuits"
+    },
+    {
+        "snack_name": "Hula Hoops",
+        "snack_description": "The party ring of the crisp world",
+        "price_in_pence": 65,
+        "category": "Crisps"
+    },
+    {
+        "snack_name": "Banana",
+        "snack_description": "Monkeys open them upside down",
+        "price_in_pence": 65,
+        "category": "Fruit"
+    },
+    {
+        "snack_name": "Chocolate Covered Raisins",
+        "snack_description": "You can never stop at one",
+        "price_in_pence": 120,
+        "category": "Chocolate"
+    },
+    {
+        "snack_name": "Butter Croissant",
+        "snack_description": "Always appreciated",
+        "price_in_pence": 175,
+        "category": "Pastries"
+    },
+    {
+        "snack_name": "Wheat Crunchies",
+        "snack_description": "It’s Crunch Time!",
+        "price_in_pence": 90,
+        "category": "Crisps"
+    },
+    {
+        "snack_name": "Pom Bears",
+        "snack_description": "I'm sorry, little buddies",
+        "price_in_pence": 85,
+        "category": "Crisps"
+    },
+    {
+        "snack_name": "Vegan Sausage Roll",
+        "snack_description": "The pinnacle of modern science",
+        "price_in_pence": 195,
+        "category": "Pastries"
+    },
+    {
+        "snack_name": "Space Raiders",
+        "snack_description": "A classic lunchbox treat",
+        "price_in_pence": 100,
+        "category": "Crisps"
+    },
+    {
+        "snack_name": "Nice Biscuits",
+        "snack_description": "More like 'alright' biscuits",
+        "price_in_pence": 65,
+        "category": "Biscuits"
+    },
+    {
+        "snack_name": "Cheese String",
+        "snack_description": "90% PVA glue",
+        "price_in_pence": 60,
+        "category": "Party Food"
+    },
+    {
+        "snack_name": "Party Rings",
+        "snack_description": "No party is complete without them!",
+        "price_in_pence": 120,
+        "category": "Biscuits"
+    },
+    {
+        "snack_name": "Hula Hoops",
+        "snack_description": "The party ring of the crisp world",
+        "price_in_pence": 80,
+        "category": "Crisps"
+    },
+    {
+        "snack_name": "Pasty",
+        "snack_description": null,
+        "price_in_pence": 300,
+        "category": "Pastries"
+    },
+    {
+        "snack_name": "Nice Biscuits",
+        "snack_description": "More like 'alright' biscuits",
+        "price_in_pence": 150,
+        "category": "Biscuits"
+    },
+    {
+        "snack_name": "Gyoza",
+        "snack_description": "Like a tiny pasty",
+        "price_in_pence": 450,
+        "category": "Party Food"
+    },
+    {
+        "snack_name": "Vol-au-vents",
+        "snack_description": "ooh lala!",
+        "price_in_pence": 320,
+        "category": "Pastry"
+    },
+    {
+        "snack_name": "Salted Peanuts",
+        "snack_description": "The snack that gets your hands salty and your heart happy",
+        "price_in_pence": 90,
+        "category": "Nuts"
+    },
+    {
+        "snack_name": "Chocolate Bar",
+        "snack_description": "Guaranteed to solve almost any problem, temporarily",
+        "price_in_pence": 130,
+        "category": "Sweets"
+    },
+    {
+        "snack_name": "Apple Slices",
+        "snack_description": "When you try to be healthy but need sweetness",
+        "price_in_pence": 100,
+        "category": "Fruit"
+    },
+    {
+        "snack_name": "Carrot Sticks",
+        "snack_description": "Because sometimes you need to dip something that crunches",
+        "price_in_pence": 110,
+        "category": "Vegetables"
+    },
+    {
+        "snack_name": "Fruit Salad",
+        "snack_description": "Fingers crossed for grapes",
+        "price_in_pence": 200,
+        "category": "Fruit"
+    },
+    {
+        "snack_name": "Rice Cakes",
+        "snack_description": "Devoid of all joy",
+        "price_in_pence": 150,
+        "category": "Party Food"
+    },
+    {
+        "snack_name": "Pretzels",
+        "snack_description": "Knot bad!",
+        "price_in_pence": 120,
+        "category": "Crisps"
+    },
+    {
+        "snack_name": "Gummy Worms",
+        "snack_description": "The early Gummy Bird catches the Gummy Worm",
+        "price_in_pence": 100,
+        "category": "Sweets"
+    },
+    {
+        "snack_name": "Cashews",
+        "snack_description": "Gesundheit",
+        "price_in_pence": 180,
+        "category": "Nuts"
+    },
+    {
+        "snack_name": "Freddo",
+        "snack_description": "How much?!",
+        "price_in_pence": 200,
+        "category": "Chocolate"
+    }
+]
