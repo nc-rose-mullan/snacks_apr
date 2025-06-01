@@ -33,7 +33,7 @@
         "snack_name": "Butter Croissant",
         "snack_description": "Always appreciated",
         "price_in_pence": 175,
-        "category": "Pastries"
+        "category": "Pastry"
     },
     {
         "snack_name": "Wheat Crunchies",
@@ -51,7 +51,7 @@
         "snack_name": "Vegan Sausage Roll",
         "snack_description": "The pinnacle of modern science",
         "price_in_pence": 195,
-        "category": "Pastries"
+        "category": "Pastry"
     },
     {
         "snack_name": "Space Raiders",
@@ -87,7 +87,7 @@
         "snack_name": "Pasty",
         "snack_description": null,
         "price_in_pence": 300,
-        "category": "Pastries"
+        "category": "Pastry"
     },
     {
         "snack_name": "Nice Biscuits",
