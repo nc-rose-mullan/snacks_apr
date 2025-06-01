@@ -1,20 +1,11 @@
-const createRef = (categories) => { 
-    const refObj = {}
-    categories.forEach((category) => { 
-        refObj[category.category_name] = category.category_id
+const createLookUp = (array, key, value) => { 
+    const lookUpObj = {}
+    array.forEach((element, index) => { 
+        const lookupKey = array[index][key]
+        const lookupValue = array[index][value]
+        lookUpObj[lookupKey] = lookupValue
     })
-    return refObj   
-};
-
-const formatSnacksData = (snacks, ref) => {
-    return snacks.map((snack) => { 
-        return [
-            snack.snack_name,
-            snack.snack_description,
-            snack['price_in_pence'],
-            ref[snack.category]
-        ]
-    })
+    return lookUpObj   
 }
 
-module.exports = {createRef, formatSnacksData}
+module.exports = {createLookUp}
