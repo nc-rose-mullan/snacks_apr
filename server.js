@@ -4,7 +4,7 @@ const db = require("./db/connection")
 const server = http.createServer((request, response) => {
     const { method, url } = request
     if (method === "GET" && url === "/api") {
-        // Headers
+        // Headers X
         response.setHeader("content-type", "application/json");
         // Status Code
         response.statusCode = 200;
