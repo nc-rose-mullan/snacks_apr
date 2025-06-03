@@ -30,35 +30,25 @@ function seed({ snacksData, categoriesData, vendingMachineData }) {
                vm_rating INT);`
            )
        }).then(() => {
-
-
            const formattedCategoryValues = categoriesData.map(({category_name}) => {
                return [category_name]
            })
            const sqlString = format(`INSERT INTO categories(category_name) VALUES %L RETURNING *`, formattedCategoryValues)
 
-
            return db.query(sqlString)
        }).then(({ rows }) => {
            const categoriesLookUp = createLookUp(rows, "category_name", "category_id")
 
-
            const formattedSnackValues = snacksData.map(({ snack_name, snack_description, price_in_pence, category }) => {
                return [snack_name, snack_description, price_in_pence, categoriesLookUp[category]]
            })
-
-
            const sqlString = format(`INSERT INTO snacks (snack_name, snack_description, price_in_pence, category_id) VALUES %L`, formattedSnackValues)
-
-
            return db.query(sqlString)
        }).then(() => {
            const formattedVMValues = vendingMachineData.map((vm) => {
                return [vm.location, vm.rating]
            })
            const sqlString = format(`INSERT INTO vending_machines (vm_location, vm_rating) VALUES %L`, formattedVMValues)
-
-
            return db.query(sqlString)
        })
       
