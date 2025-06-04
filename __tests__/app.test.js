@@ -12,7 +12,7 @@ afterAll(() => {
   return db.end();
 });
 
-describe('/api/snacks/:snack_id', () => {
+describe.only('/api/snacks/:snack_id', () => {
   test('GET - 200: Responds with the snack object of the correct id', () => {
     return request(app)
       .get('/api/snacks/3')
@@ -62,7 +62,7 @@ describe('/api/snacks', () => {
   });
 });
 
-describe.only('getSnacks', () => {
+describe('getSnacks', () => {
   test('200: responds with a list of all snacks', () => {
     return request(app)
       .get('/api/snacks')

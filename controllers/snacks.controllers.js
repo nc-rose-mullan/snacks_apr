@@ -5,8 +5,6 @@ const {
 } = require('../models/snacks.models.js');
 
 const getSnackById = (request, response) => {
-  console.log('hello from snacks controller');
-
   const { snack_id } = request.params;
   fetchSnackById(snack_id).then((snack) => {
     response.status(200).send({ snack: snack });
