@@ -23,7 +23,6 @@ const postSnacks = (request, response) => {
 
   insertSnack(snack_name, snack_description, price_in_pence, category_id).then(
     (snack) => {
-      console.log(snack);
       response.status(201).send({ snack });
     }
   );
