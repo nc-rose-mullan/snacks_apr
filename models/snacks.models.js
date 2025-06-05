@@ -4,6 +4,9 @@ const fetchSnackById = (id) => {
   return db
     .query(`SELECT * FROM snacks WHERE snack_id = $1`, [id])
     .then(({ rows }) => {
+      if (!rows.length) {
+        return Promise.reject({ status: 404, msg: 'not found' });
+      }
       const snack = rows[0];
       return snack;
     });

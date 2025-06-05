@@ -1,0 +1,59 @@
+{
+    "GET /api": {
+        "description": "serves up a json representation of all the available endpoints of the api"
+    },
+    "GET /api/snacks": {
+        "description": "serves an array of all snacks",
+        "queries": [],
+        "exampleResponse": {
+            "snacks": [
+                {
+                    "snack_id": 1,
+                    "snack_name": "Kit Kat",
+                    "snack_description": "Time for a break",
+                    "price_in_pence": 100,
+                    "category_id": 10
+                }
+            ]
+        },
+        "GET /api/snacks/:snack_id": {
+            "description": "serves a single article",
+            "queries": [],
+            "exampleResponse": {
+                "snack": {
+                    "snack_id": 12,
+                    "snack_name": "Cheese String",
+                    "snack_description": "90% PVA glue",
+                    "price_in_pence": 60,
+                    "category_id": 9
+                }
+            }
+        },
+        "POST /api/snacks/:snack_id": {
+            "POST /api/snacks": {
+                "description": "adds a new snack to the database",
+                "bodyFormat": {
+                    "snack_name": "string (required)",
+                    "snack_description": "string (required)",
+                    "price_in_pence": "integer (required)",
+                    "category_id": "integer (required)"
+                },
+                "exampleRequestBody": {
+                    "snack_name": "Wotsits",
+                    "snack_description": "Puffed corn snack",
+                    "price_in_pence": 85,
+                    "category_id": 7
+                },
+                "exampleResponse": {
+                    "snack": {
+                        "snack_id": 29,
+                        "snack_name": "Wotsits",
+                        "snack_description": "Puffed corn snack",
+                        "price_in_pence": 85,
+                        "category_id": 7
+                    }
+                }
+            }
+        }
+    }
+}

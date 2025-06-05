@@ -32,6 +32,22 @@ describe.only('/api/snacks/:snack_id', () => {
         expect(typeof category_id).toBe('number');
       });
   });
+  test('GET - 400: responds with an error if id is not valid', () => {
+    return request(app)
+      .get('/api/snacks/notanum')
+      .expect(400)
+      .then(({ body }) => {
+        expect(body.msg).toBe('bad request');
+      });
+  });
+  test('GET - 404: responds with an error if the snack does not exist', () => {
+    return request(app)
+      .get('/api/snacks/99')
+      .expect(404)
+      .then(({ body }) => {
+        expect(body.msg).toBe('not found');
+      });
+  });
 });
 
 describe('/api/snacks', () => {

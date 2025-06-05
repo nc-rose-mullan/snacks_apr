@@ -4,11 +4,18 @@ const {
   insertSnack,
 } = require('../models/snacks.models.js');
 
-const getSnackById = (request, response) => {
+// error thrown or promises rejected inside async middleware will be automatically passed to next
+
+const getSnackById = (request, response, next) => {
   const { snack_id } = request.params;
-  fetchSnackById(snack_id).then((snack) => {
-    response.status(200).send({ snack: snack });
-  });
+  fetchSnackById(snack_id)
+    .then((snack) => {
+      response.status(200).send({ snack: snack });
+    })
+    .catch((err) => {
+      console.log(err, 'in catch block');
+      next(err);
+    });
 };
 
 const getSnacks = (request, response) => {
