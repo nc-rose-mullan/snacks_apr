@@ -5,8 +5,6 @@ const {
   insertSnack,
 } = require('../models/snacks.models.js');
 
-// error thrown or promises rejected inside async middleware will be automatically passed to next
-
 const getSnackById = (req, res, next) => {
   const { snack_id } = req.params;
   const { order , sort_by } = req.query
@@ -15,7 +13,6 @@ const getSnackById = (req, res, next) => {
       res.status(200).send({ snack: snack });
     })
     .catch((err) => {
-      console.log(err, 'in catch block');
       next(err);
     });
 };

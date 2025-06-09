@@ -15,7 +15,6 @@ const handleCustomErrors = (err, req, res, next) => {
 };
 
 const handleServerErrors = (err, req, res, next) => {
-  console.error(err, '< from the err handle');
   res.status(500).send('Something broke!');
 };
 

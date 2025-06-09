@@ -13,12 +13,7 @@ const fetchSnackById = (id) => {
 };
 
 const fetchSnacks = (category_id) => {
-  // i have some queries... sort_by ===  snack_name
-  // whitelist the sortby queries
   const acceptableQueries = [];
-
-  // check whether the sort_by is in the whitelist
-  // if not, reject the Promise before it hits the db
   const queryParams = [];
   let queryString = 'SELECT * FROM snacks ';
 
@@ -26,12 +21,6 @@ const fetchSnacks = (category_id) => {
     queryParams.push(category_id);
     queryString += `WHERE category_id = $${queryParams.length}`;
   }
-
-  // if (sort_by) {
-  // do some logic
-  // can not use node-pg tp parameterise a column name
-  //   queryString += `ORDER BY ${sort_by}`;
-  // }
 
   return db.query(queryString, queryParams).then(({ rows }) => {
     return rows;

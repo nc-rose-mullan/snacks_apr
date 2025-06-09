@@ -13,8 +13,6 @@ const {
   handleServerErrors,
 } = require('./errors.js');
 
-// /api/banana
-
 app.use(express.json());
 
 app.get('/api', getApi);
@@ -29,13 +27,10 @@ app.use((req, res) => {
   res.status(404).send({ msg: 'silly sausage, no endpoint here!' });
 });
 
-// handles postgres errs
 app.use(handlePostgresErrors);
 
-// handles custom errs
 app.use(handleCustomErrors);
 
-// handler of last resort!
 app.use(handleServerErrors);
 
 module.exports = app;
