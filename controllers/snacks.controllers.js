@@ -1,3 +1,4 @@
+const fetchCategories = require('../models/categories.models.js');
 const {
   fetchSnackById,
   fetchSnacks,
@@ -6,11 +7,12 @@ const {
 
 // error thrown or promises rejected inside async middleware will be automatically passed to next
 
-const getSnackById = (request, response, next) => {
-  const { snack_id } = request.params;
+const getSnackById = (req, res, next) => {
+  const { snack_id } = req.params;
+  const { order , sort_by } = req.query
   fetchSnackById(snack_id)
     .then((snack) => {
-      response.status(200).send({ snack: snack });
+      res.status(200).send({ snack: snack });
     })
     .catch((err) => {
       console.log(err, 'in catch block');
@@ -18,19 +20,30 @@ const getSnackById = (request, response, next) => {
     });
 };
 
-const getSnacks = (request, response) => {
-  fetchSnacks().then((snacks) => {
-    response.status(200).send({ snacks });
-  });
+const getSnacks = (request, response, next) => {
+  const { category_id } = request.query;
+
+  const promises = [fetchSnacks(category_id)];
+
+  if (category_id) {
+    promises.push(fetchCategories(category_id));
+  }
+
+  Promise.all(promises)
+    .then((resolvedPromises) => {
+      const snacks = resolvedPromises[0];
+      response.status(200).send({ snacks });
+    })
+    .catch(next);
 };
 
-const postSnacks = (request, response) => {
+const postSnacks = (req, res) => {
   const { snack_name, snack_description, price_in_pence, category_id } =
-    request.body;
+    req.body;
 
   insertSnack(snack_name, snack_description, price_in_pence, category_id).then(
     (snack) => {
-      response.status(201).send({ snack });
+      res.status(201).send({ snack });
     }
   );
 };

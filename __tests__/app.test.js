@@ -12,7 +12,7 @@ afterAll(() => {
   return db.end();
 });
 
-describe.only('/api/snacks/:snack_id', () => {
+describe('/api/snacks/:snack_id', () => {
   test('GET - 200: Responds with the snack object of the correct id', () => {
     return request(app)
       .get('/api/snacks/3')
@@ -78,23 +78,54 @@ describe('/api/snacks', () => {
   });
 });
 
-describe('getSnacks', () => {
-  test('200: responds with a list of all snacks', () => {
+describe.only('GET: /api/snacks', () => {
+  test('200: Responds with a list of all snacks', () => {
     return request(app)
       .get('/api/snacks')
       .expect(200)
       .then(({ body }) => {
-        const { snacks } = body;
-        expect(snacks).toHaveLength(6);
+        const snacks = body.snacks;
+        expect(snacks.length).toBe(6);
         snacks.forEach((snack) => {
-          expect(snack).toMatchObject({
-            snack_id: expect.any(Number),
-            snack_name: expect.any(String),
-            snack_description: expect.any(String),
-            price_in_pence: expect.any(Number),
-            category_id: expect.any(Number),
-          });
+          expect(typeof snack.snack_id).toBe('number');
+          expect(typeof snack.snack_name).toBe('string');
+          expect(typeof snack.snack_description).toBe('string');
+          expect(typeof snack.price_in_pence).toBe('number');
+          expect(typeof snack.category_id).toBe('number');
         });
       });
   });
+  test('200: accepts a category_id query which responds with only snacks with that category_id', () => {
+    return request(app)
+      .get('/api/snacks?category_id=2')
+      .expect(200)
+      .then(({ body }) => {
+        const { snacks } = body;
+        expect(snacks).toHaveLength(3);
+        snacks.forEach((snack) => {
+          expect(snack.category_id).toBe(2);
+        });
+      });
+  });
+  test('200: responds with an empty array if the category exists but there are no snacks', () => {
+    return request(app)
+      .get('/api/snacks?category_id=4')
+      .expect(200)
+      .then(({ body }) => {
+        const { snacks } = body;
+        expect(snacks).toEqual([]);
+      });
+  });
+  test('404: responds with an error message if the category does not exist', () => {
+    return request(app)
+      .get('/api/snacks?category_id=10')
+      .expect(404)
+      .then(({ body }) => {
+        expect(body.msg).toBe('not found');
+      });
+  });
 });
+
+// test.only('bluh', async () => {
+//   await fetch;
+// });
