@@ -11,17 +11,13 @@ const {
   handleCustomErrors,
   handleServerErrors,
 } = require('./errors.js');
-const ejs = require("ejs")
 
-app.set('view engine', 'ejs');
-app.set('views', 'public');
 
 app.use(express.json());
 
 app.get('/api', getApi)
 
-
-app.get('/api/snacks', (req, res, next) => next(), getSnacks);
+app.get('/api/snacks', getSnacks);
 
 app.get('/api/snacks/:snack_id', getSnackById);
 
