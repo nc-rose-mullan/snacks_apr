@@ -16,10 +16,9 @@ afterAll(() => {
 describe('/api', () => { 
   test('GET - 200 and responds with an object describing endpoints', () => { 
     return request(app)
-      .get('/api/endpoints')
+      .get('/api')
       .expect(200)
       .then(({ body }) => { 
-        console.log(body)
         expect(body.endpoints).toEqual(endpoints)
       })
   })

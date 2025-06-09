@@ -18,13 +18,8 @@ app.set('views', 'public');
 
 app.use(express.json());
 
-app.use('/api', express.static('public'));
-app.get('/api/endpoints', getApi)
+app.get('/api', getApi)
 
-
-app.get('/', (req, res) => {
-  res.render('index', endpoints);
-});
 
 app.get('/api/snacks', (req, res, next) => next(), getSnacks);
 
