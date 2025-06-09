@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-
 const {
   getSnackById,
   getSnacks,
@@ -12,10 +11,20 @@ const {
   handleCustomErrors,
   handleServerErrors,
 } = require('./errors.js');
+const ejs = require("ejs")
+
+app.set('view engine', 'ejs');
+app.set('views', 'public');
 
 app.use(express.json());
 
-app.get('/api', getApi);
+app.use('/api', express.static('public'));
+app.get('/api/endpoints', getApi)
+
+
+app.get('/', (req, res) => {
+  res.render('index', endpoints);
+});
 
 app.get('/api/snacks', (req, res, next) => next(), getSnacks);
 

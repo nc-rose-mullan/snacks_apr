@@ -3,6 +3,7 @@ const seed = require('../db/seeds/seed.js');
 const data = require('../db/data/test-data/index.js');
 const db = require('../db/connection.js');
 const app = require('../app.js');
+const endpoints = require('../endpoints.json')
 
 beforeEach(() => {
   return seed(data);
@@ -12,6 +13,17 @@ afterAll(() => {
   return db.end();
 });
 
+describe('/api', () => { 
+  test('GET - 200 and responds with an object describing endpoints', () => { 
+    return request(app)
+      .get('/api/endpoints')
+      .expect(200)
+      .then(({ body }) => { 
+        console.log(body)
+        expect(body.endpoints).toEqual(endpoints)
+      })
+  })
+})
 describe('/api/snacks/:snack_id', () => {
   test('GET - 200: Responds with the snack object of the correct id', () => {
     return request(app)
