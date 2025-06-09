@@ -12,7 +12,6 @@ const {
   handleServerErrors,
 } = require('./errors.js');
 
-
 app.use(express.json());
 
 app.get('/api', getApi)
