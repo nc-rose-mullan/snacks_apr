@@ -78,7 +78,7 @@ describe('/api/snacks', () => {
   });
 });
 
-describe.only('GET: /api/snacks', () => {
+describe('GET: /api/snacks', () => {
   test('200: Responds with a list of all snacks', () => {
     return request(app)
       .get('/api/snacks')
@@ -125,7 +125,3 @@ describe.only('GET: /api/snacks', () => {
       });
   });
 });
-
-// test.only('bluh', async () => {
-//   await fetch;
-// });
