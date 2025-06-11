@@ -11,8 +11,18 @@ const {
   handleCustomErrors,
   handleServerErrors,
 } = require('./errors.js');
+const ejs = require("ejs")
 
 app.use(express.json());
+
+app.set("view engine", "ejs")
+app.set("views", "public")
+
+app.use(express.static("public"))
+
+app.get("/", (request, response) => { 
+  response.render("index", { name: "Daniel" })
+})
 
 app.get('/api', getApi)
 
